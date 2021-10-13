@@ -16,6 +16,16 @@ body{
  background-color: lightblue;
  text-align: center;
 }
+input{
+  border: 2px solid red;
+  border-radius: 4px;
+}
+select {
+ 
+  border:2px solid red;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
 
 </style>
 </head>

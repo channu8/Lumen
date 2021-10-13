@@ -26,4 +26,5 @@ public class DonationCamp {
 	@Column(name="location")
 	String location;
 
+	
 }

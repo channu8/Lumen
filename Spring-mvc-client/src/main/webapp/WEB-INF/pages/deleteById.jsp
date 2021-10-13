@@ -12,6 +12,10 @@ body {
   background-color: lightblue;
   text-align: center;
 }
+input{
+  border: 2px solid red;
+  border-radius: 4px;
+}
 </style>
 </head>
 <body>
