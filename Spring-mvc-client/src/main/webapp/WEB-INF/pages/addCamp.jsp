@@ -6,10 +6,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>BloodCamp Registration</title>
+<style>
+.frame {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+body{
+ background-color: lightblue;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-<div>
+
+<div class="frame">
    <form:form action="/addCamp" modelAttribute="command" method="post">
+<h1>BloodCamp Registration</h1>
 <div>
 <label for="">camp ID</label>
 <form:input path="bloodCampId"/>
@@ -38,5 +51,6 @@
 </div>
 </form:form>
 </div>
+<h2 >Thank You for Registring a BloodCamp</h2>
 </body>
 </html>

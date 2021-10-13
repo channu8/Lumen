@@ -15,10 +15,15 @@ import com.example.demo.entity.Donor;
 public interface DonorRepository extends JpaRepository<Donor, Integer> {
 	
 	public List<Donor> findByAddress(String srchAddress ); 
+	public List<Donor> findByBloodGroup(String bloodGroup);
 	
-	@Query(nativeQuery = true,value = "update donor set address =:adr where donor_id =:number")
+	@Query(nativeQuery = true,value = "update donor set donorname =:name,mobilenumber=:mob,bloodgroup=:blood,address =:adr  where donor_id =:number")
 	@Modifying
 	@Transactional
-	public int updateAddress(@Param("number")int donorId,@Param("adr")String address);
+	public int updateAddress(@Param("number")int donorId,@Param("name")String donorName,@Param("mob")long mobileNumber, @Param("blood")String bloodGroup,@Param("adr")String address);
+	
+	@Query(nativeQuery = true,value = "select * from donor where months_between(sysdate,lastdonationdate) between 0 and 6")
+	public List<Donor> donorsLastSixMonths();
+
 
 }

@@ -26,9 +26,17 @@ public class DonorService {
 		return this.repo.findByAddress(address);
 	}
 	
-	public int updateAddress(int donorId,String address) {
+	public List<Donor> findByBloodGroup(String bloodGroup){
+		return this.repo.findByBloodGroup(bloodGroup);
+	}
+	
+	public List<Donor> donorsLastSixMonths() {
+		return this.repo.donorsLastSixMonths();
+	}
+	
+	public int updateAddress(int donorId,String donorName,long mobileNumber,String bloodGroup,String address) {
 		
-		return this.repo.updateAddress(donorId,address);
+		return this.repo.updateAddress(donorId,donorName,mobileNumber,bloodGroup,address);
 	}
 	
 	

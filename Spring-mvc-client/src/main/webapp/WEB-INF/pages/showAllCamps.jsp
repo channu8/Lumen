@@ -6,8 +6,32 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>BloodCamps List</title>
+<style>
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+   width: 100%;
+}
+tr, td {
+  border-bottom: 1px solid #ddd;
+}
+
+.frame {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+body{
+ background-color: lightblue;
+ text-align: center;
+}
+
+</style>
 </head>
 <body>
+<div class="frame">
+<h1>Donation Camps Avliable</h1>
+
 <table>
 	<tr>
 		<td>Camp Id</td>
@@ -28,5 +52,6 @@
 	</tr>
 </c:forEach>	
 </table>
+</div>
 </body>
 </html>
